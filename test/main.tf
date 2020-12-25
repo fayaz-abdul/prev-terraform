@@ -28,6 +28,11 @@ module "ec2" {
   subnet_cidr_block_private = var.subnet_cidr_block_private
   subnets = module.vpc.vpc_subnet_ids
   ami = var.ami
-  vpc_id = module.vpc.vpc_id
+#  vpc_id = module.vpc.vpc_id
+  private_subnet = module.vpc.private_subnet
+  public_subnet = module.vpc.public_subnet
+  sg_public = module.vpc.sg_public
+  sg_private = module.vpc.sg_private
+ # aws_instance = module.ec2.aws_instance
 }
 

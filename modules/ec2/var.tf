@@ -22,8 +22,9 @@ variable "ami" {
     type = string
 }
 
-variable "aws_vpc" {
-    type = string
-}
-
 variable subnets{}
+variable private_subnet{}
+variable public_subnet{}
+variable sg_private{}
+variable sg_public{}
+#variable aws_instance{}

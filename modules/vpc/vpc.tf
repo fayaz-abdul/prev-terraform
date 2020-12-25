@@ -164,3 +164,18 @@ output "cloud_vpc_id_cidr" {
 output "vpc_subnet_ids" {
     value = [aws_subnet.subnet_public.id,aws_subnet.subnet_private.id]
 }
+
+output "private_subnet" {
+  value = aws_subnet.subnet_private.id
+}
+output "public_subnet" {
+  value = aws_subnet.subnet_public.id
+}
+
+output "sg_public" {
+  value = aws_security_group.sg_public.id
+}
+
+output "sg_private" {
+  value = aws_security_group.sg_private.id
+}

@@ -21,3 +21,4 @@ variable "project" {
 }
 
 variable subnets{}
+
