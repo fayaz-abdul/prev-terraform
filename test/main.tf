@@ -33,6 +33,7 @@ module "ec2" {
   public_subnet = module.vpc.public_subnet
   sg_public = module.vpc.sg_public
   sg_private = module.vpc.sg_private
+  cloud_vpc_id = module.vpc.cloud_vpc_id
  # aws_instance = module.ec2.aws_instance
 }
 

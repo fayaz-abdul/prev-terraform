@@ -27,4 +27,7 @@ variable private_subnet{}
 variable public_subnet{}
 variable sg_private{}
 variable sg_public{}
+variable cloud_vpc_id {
+  
+}
 #variable aws_instance{}
