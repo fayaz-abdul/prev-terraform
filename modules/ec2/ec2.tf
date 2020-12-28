@@ -80,3 +80,7 @@ resource "aws_vpc_peering_connection_accepter" "con_accept" {
     Side = "Paris-Ireland-peering"
   }
  }
+
+output "peer_con_id" {
+    value = aws_vpc_peering_connection.con.id
+}

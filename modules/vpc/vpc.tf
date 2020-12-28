@@ -46,6 +46,10 @@ resource "aws_route_table" "route_table_public" {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.internet_gateway.id
   }
+    route {
+    cidr_block = var.peering_region_cidr
+    vpc_peering_connection_id = var.peer_con_id
+  }
   tags = {
     Name = "${var.environment}-${var.project}-Public-RouteTable"
     "Environment" = var.environment
@@ -88,6 +92,10 @@ resource "aws_route_table" "route_table_private" {
     route {
     cidr_block = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.nat_gateway.id
+  }
+    route {
+    cidr_block = var.peering_region_cidr
+    vpc_peering_connection_id = var.peer_con_id
   }
   tags = {
     Name = "${var.environment}-${var.project}-Private-RouteTable"
@@ -152,6 +160,7 @@ resource "aws_security_group" "sg_private"{
     Name = "Private SG"
   }
 }
+
 
 output "cloud_vpc_id" {
     value = aws_vpc.vpc_cloud.id

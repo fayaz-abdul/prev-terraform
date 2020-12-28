@@ -8,6 +8,7 @@ region = "eu-south-1"
 cidr_block = "11.0.0.0/16"
 subnet_cidr_block_public = "11.0.1.0/24"
 subnet_cidr_block_private = "11.0.2.0/24"
+peering_region_cidr = "20.200.0.0/16"
 
 #EC2 VARIABLES
 ami = "ami-00373688fb7818d45"

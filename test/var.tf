@@ -26,3 +26,4 @@ variable "project" {
 variable "ami" {
     type = string 
 }
+variable "peering_region_cidr" {}

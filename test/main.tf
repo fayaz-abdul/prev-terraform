@@ -17,6 +17,8 @@ module "vpc" {
   subnet_cidr_block_public = var.subnet_cidr_block_public
   subnet_cidr_block_private = var.subnet_cidr_block_private
   subnets = module.vpc.vpc_subnet_ids
+  peer_con_id = module.ec2.peer_con_id
+  peering_region_cidr = var.peering_region_cidr
 }
 
 module "ec2" {
